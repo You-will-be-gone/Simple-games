@@ -7,7 +7,7 @@ using namespace std;
 int main() 
 { 
 int e;
-cout << "First game or second game? (1 or 2) ";
+cout << "First game, second game or third game? (1, 2 or 3) ";
 cin >> e;
 
 if (e == 1){
@@ -96,6 +96,23 @@ sotn = fn * sn;
       cout << "Wrong! The answer was " << sotn << endl;
 }
 
+}
+
+}
+
+if (e == 3){
+int w;
+cout << "Guess how much jelly beans are in the jar: ";
+cin >> w; 
+srand((unsigned)time(0)); 
+    int p;
+    p = (rand()%178)+1; 
+    
+    if (p == w) {
+      cout << "You guessed correctly! There were " << p << " jelly beans in the jar." << endl;
+    }
+if (p != w) {
+cout << "Sorry, your guess was incorrect. There were " << p << " jelly beans in the jar." << endl;
 }
 
 }
