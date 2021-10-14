@@ -102,7 +102,7 @@ sotn = fn * sn;
 
 if (e == 3){
 int w;
-cout << "Guess how much jelly beans are in the jar: ";
+cout << "Guess how much jelly beans are in the jar (limit of 178): ";
 cin >> w; 
 srand((unsigned)time(0)); 
     int p;
