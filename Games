@@ -120,7 +120,7 @@ if (e == 4) {
   double fn, sn, sotn;
  char ch;
 
-cout << "Multiplication, addition, subtraction, division, or square root? (m, a, s, d or z): ";
+cout << "Multiplication, addition, subtraction, division, square root, or exponent? (m, a, s, d, z, or h): ";
 cin >> ch;
 if (ch == 'm') {  
 
@@ -173,6 +173,18 @@ sotn = sqrt(fn);
 cout << "The square root of " << fn << " is " << sotn << "." << endl;
 
 }
+
+if (ch == 'h'){
+
+cout << "Enter the base then the power: ";
+cin >> fn >> sn;
+
+sotn = pow(fn,sn); 
+
+cout << "The answer is " << sotn << "." << endl;
+
+}
+
 
 }
 
