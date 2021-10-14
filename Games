@@ -1,0 +1,103 @@
+#include <cstdlib> 
+#include <ctime> 
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{ 
+int e;
+cout << "First game or second game? (1 or 2) ";
+cin >> e;
+
+if (e == 1){
+int c;
+ cout << "You find 4 caves, one contains treasure, the rest are traps. Which one will you choose? (1, 2, 3 or 4) ";
+cin >> c; 
+
+    srand((unsigned)time(0)); 
+    int i;
+    i = (rand()%4)+1; 
+    cout << i << "\n"; 
+
+if (i == c) {
+  cout << "You walked into the cave, and saw the most gold, diamonds and gems that you have ever seen. You Win!" << endl; 
+}
+   
+if (i != c) {
+  srand((unsigned)time(0)); 
+    int d;
+    d = (rand()%3)+1; 
+    if (d==1){
+      cout << "You walked into the cave, and a wave of poison darts hits you! You Lose!" << endl;
+    }
+if (d == 2){
+  cout << "You walked into the cave, and the cave floor dissapeared! You Lose!" << endl;
+}
+
+if (d == 3){
+  cout << "You walked into the cave, and a spike impaled you from the ceiling! You Lose!" << endl;
+}
+
+}
+
+}
+
+if (e == 2){
+
+int fn, sn, sotn, an; 
+
+cout << "Type two numbers and try to guess the answer (The first one has to be bigger than the second one, It's either multiplucation, subtraction or addition) : ";
+cin >> fn >> sn;
+
+
+ srand((unsigned)time(0)); 
+    int k;
+    k = (rand()%3)+1;
+
+    if (k == 1){
+    cout << "What is your guess? ";
+    cin >> an;
+
+    sotn = fn + sn;
+
+    if (sotn == an) {
+      cout << "Correct!" << endl;
+    }
+    if (sotn != an){
+      cout << "Wrong! The answer was " << sotn << endl;
+    }
+    } 
+  if (k == 2){
+    cout << "What is your guess? ";
+    cin >> an; 
+
+    sotn = fn - sn;
+
+    if (sotn == an) {
+      cout << "Correct!" << endl;
+    }
+    if (sotn != an){
+      cout << "Wrong! The answer was " << sotn << endl;
+  }
+
+
+}
+if (k == 3){
+cout << "What is your guess? ";
+cin >> an;
+
+sotn = fn * sn;
+
+ if (sotn == an) {
+      cout << "Correct!" << endl;
+    }
+    if (sotn != an){
+      cout << "Wrong! The answer was " << sotn << endl;
+}
+
+}
+
+}
+
+}
