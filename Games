@@ -7,7 +7,7 @@ using namespace std;
 int main() 
 { 
 int e;
-cout << "First game, second game or third game? (1, 2 or 3) ";
+cout << "First game, second game, third game or fourth, an integer calculator? (1, 2, 3 or 4) ";
 cin >> e;
 
 if (e == 1){
@@ -113,6 +113,56 @@ srand((unsigned)time(0));
     }
 if (p != w) {
 cout << "Sorry, your guess was incorrect. There were " << p << " jelly beans in the jar." << endl;
+}
+
+}
+if (e == 4) { 
+  int fn, sn, sotn;
+ char ch;
+
+cout << "Multiplication, addition, subtraction or division? (m, a, s or d): ";
+cin >> ch;
+if (ch == 'm') {  
+
+cout << "Enter two integers: ";
+cin >> fn >> sn;
+
+sotn = fn * sn; 
+
+cout << fn << " * " << sn << " = " << sotn <<endl;
+}
+
+if (ch== 'a') {
+
+cout << "Enter two integers: ";
+cin >> fn >> sn;
+
+sotn = fn + sn;
+
+cout << fn << " + " << sn << " = " << sotn <<endl;
+
+}
+
+if (ch == 's'){
+
+cout << "Enter two integers in the order you want them to be subtracted: ";
+cin >> fn >> sn;
+
+sotn = fn - sn;
+
+cout << fn << " - " << sn << " = " << sotn <<endl; 
+
+}
+
+if (ch == 'd'){
+
+cout << "Enter two integers in the order you want them divided: ";
+cin >> fn >> sn;
+
+sotn = fn / sn;
+
+cout << fn << " ÷ " << sn << " = " << sotn << endl;
+
 }
 
 }
