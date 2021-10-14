@@ -1,13 +1,13 @@
 #include <cstdlib> 
 #include <ctime> 
 #include <iostream>
-
+#include <cmath> 
 using namespace std;
 
 int main() 
 { 
 int e;
-cout << "First game, second game, third game or fourth, an integer calculator? (1, 2, 3 or 4) ";
+cout << "First game, second game, third game or fourth, a calculator? (1, 2, 3 or 4) ";
 cin >> e;
 
 if (e == 1){
@@ -117,14 +117,14 @@ cout << "Sorry, your guess was incorrect. There were " << p << " jelly beans in 
 
 }
 if (e == 4) { 
-  int fn, sn, sotn;
+  double fn, sn, sotn;
  char ch;
 
-cout << "Multiplication, addition, subtraction or division? (m, a, s or d): ";
+cout << "Multiplication, addition, subtraction, division, or square root? (m, a, s, d or z): ";
 cin >> ch;
 if (ch == 'm') {  
 
-cout << "Enter two integers: ";
+cout << "Enter two numbers: ";
 cin >> fn >> sn;
 
 sotn = fn * sn; 
@@ -134,7 +134,7 @@ cout << fn << " * " << sn << " = " << sotn <<endl;
 
 if (ch== 'a') {
 
-cout << "Enter two integers: ";
+cout << "Enter two numbers: ";
 cin >> fn >> sn;
 
 sotn = fn + sn;
@@ -145,7 +145,7 @@ cout << fn << " + " << sn << " = " << sotn <<endl;
 
 if (ch == 's'){
 
-cout << "Enter two integers in the order you want them to be subtracted: ";
+cout << "Enter two numbers in the order you want them to be subtracted: ";
 cin >> fn >> sn;
 
 sotn = fn - sn;
@@ -156,12 +156,21 @@ cout << fn << " - " << sn << " = " << sotn <<endl;
 
 if (ch == 'd'){
 
-cout << "Enter two integers in the order you want them divided: ";
+cout << "Enter two numbers in the order you want them divided: ";
 cin >> fn >> sn;
-
-sotn = fn / sn;
+sotn = fn / sn; 
 
 cout << fn << " ÷ " << sn << " = " << sotn << endl;
+
+}
+
+if (ch == 'z'){
+
+cout << "Enter a number that you want the square root of: ";
+cin >> fn;
+sotn = sqrt(fn);
+
+cout << "The square root of " << fn << " is " << sotn << "." << endl;
 
 }
 
